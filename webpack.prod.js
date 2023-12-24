@@ -7,7 +7,7 @@ module.exports = merge(common, {
   mode: "production",
   plugins: [new CleanWebpackPlugin()],
   output: {
-    filename: "main.[contenthash].js",
+    filename: "[name].[contenthash].bundle.js",
     path: path.resolve(__dirname, "dist"),
     assetModuleFilename: "assets/[name].[hash].[ext]",
   },
