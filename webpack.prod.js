@@ -16,14 +16,6 @@ module.exports = merge(common, {
   },
   optimization: {
     minimizer: [
-      new HtmlWebpackPlugin({
-        template: "./src/template.html",
-        options: {
-          removeAttributeQuotes: true,
-          removeComments: true,
-          collapseWhitespace: true,
-        },
-      }),
       new CssMinimizerPlugIin({
         minimizerOptions: {
           preset: [
@@ -38,9 +30,6 @@ module.exports = merge(common, {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: "./src/template.html",
-    }),
     new MiniCssExtractPlugin({
       filename: "[name].[contenthash].css",
     }),
